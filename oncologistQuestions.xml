@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules>
+    <Rule id="throatProblems">
+        <Question>Do you have throat aches?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="skinProblems">
+        <Question>Have you noticed any rash on your skin?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="bonesProblems">
+        <Question>Have you noticed decreased durability of your bones?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="otherProblems">
+        <Question>Have you got other problems with any of your organs?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    ...
+    <Rule id="junkFood">
+        <Question>What kind of food were you eating last week? (Type in few examples)</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="pizza,burger,french fries,chocolate,candies,candy,chicken nuggets"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="apple,carrot,vegetables,fruits,water"/>
+            </Selection>
+        </Answer>
+    </Rule>
+</Rules>
