@@ -1,4 +1,7 @@
-package com.codecool.expertsystem;
+package com.codecool.expertsystem.controllers;
+
+import com.codecool.expertsystem.models.*;
+import com.codecool.expertsystem.views.*;
 
 public class ESProvider {
 

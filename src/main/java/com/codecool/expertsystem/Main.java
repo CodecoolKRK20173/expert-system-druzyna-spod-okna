@@ -1,8 +1,12 @@
 package com.codecool.expertsystem;
 
+import com.codecool.expertsystem.models.FactParser;
+import com.codecool.expertsystem.models.XMLParser;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Init!");
+        XMLParser fP = new FactParser("src/main/resources/Facts.xml");
+        ((FactParser) fP).getFactRepository();
     }
 }

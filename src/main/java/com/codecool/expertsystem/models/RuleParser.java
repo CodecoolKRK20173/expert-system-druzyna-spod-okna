@@ -1,4 +1,4 @@
-package com.codecool.expertsystem;
+package com.codecool.expertsystem.models;
 
 public class RuleParser extends XMLParser {
 
@@ -8,6 +8,6 @@ public class RuleParser extends XMLParser {
     }
 
     public void loadXmlDocument(String xmlPath) {
-        
+
     }
 }
