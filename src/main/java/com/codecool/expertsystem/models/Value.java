@@ -1,4 +1,4 @@
-package com.codecool.expertsystem;
+package com.codecool.expertsystem.models;
 
 import java.util.List;
 

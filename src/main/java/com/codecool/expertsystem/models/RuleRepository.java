@@ -1,9 +1,9 @@
-package com.codecool.expertsystem;
+package com.codecool.expertsystem.models;
 
 import java.util.Iterator;
 
 public class RuleRepository {
-    
+
     public void addQuestion(Question question) {
 
     }

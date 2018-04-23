@@ -1,4 +1,4 @@
-package com.codecool.expertsystem;
+package com.codecool.expertsystem.models;
 
 public class Answer {
 
@@ -10,5 +10,5 @@ public class Answer {
 
     }
 
-    
+
 }
