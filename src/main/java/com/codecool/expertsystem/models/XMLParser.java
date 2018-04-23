@@ -15,6 +15,7 @@ public abstract class XMLParser {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
             this.doc = docBuilder.parse(xmlFile);
+            this.doc.getDocumentElement().normalize();
         } catch (Exception err) {
             err.printStackTrace();
         }
