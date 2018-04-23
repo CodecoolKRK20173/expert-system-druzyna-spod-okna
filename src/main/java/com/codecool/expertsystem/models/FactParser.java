@@ -22,10 +22,6 @@ public class FactParser extends XMLParser {
             if (xmlFact.getNodeType() == Node.ELEMENT_NODE) {
                 Fact parsedFact = parseXmlFactToObject(xmlFact);
                 factRepository.addFact(getSettedFactValues(xmlFact, parsedFact));
-                System.out.println(parsedFact.getFactId() + ": " + parsedFact.getDescription());
-                for (String id: parsedFact.getIdSet()) {
-                    System.out.print(id + ": " + parsedFact.getValueById(id) + " ");
-                } System.out.println("");
             }
         }
         return factRepository;
