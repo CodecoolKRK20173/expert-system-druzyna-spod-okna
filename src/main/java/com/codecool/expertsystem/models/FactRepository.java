@@ -1,7 +1,7 @@
-package com.codecool.expertsystem;
+package com.codecool.expertsystem.models;
 
 public class FactRepository {
-    
+
     public void addFact(Fact fact) {
 
     }
