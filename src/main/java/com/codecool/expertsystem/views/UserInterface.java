@@ -12,6 +12,12 @@ public class UserInterface {
         return UserInput.getString();
     }
 
+    public static void showDiagnose(String diagnose) {
+        System.out.println("Opinion of our expert: ");
+        System.out.println("~~" + diagnose + "~~");
+        printSeparator();
+    }
+
     private static void printSeparator() {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }

@@ -15,6 +15,9 @@ public class ESProvider {
     public ESProvider(FactParser factParser, RuleParser ruleParser) {
         this.factRepository = factParser.getFactRepository();
         this.ruleRepository = ruleParser.getRuleRepository();
+        collectAnswers();
+        String diagnose = evaluate();
+        UserInterface.showDiagnose(diagnose);
     }
 
     public void collectAnswers() {
