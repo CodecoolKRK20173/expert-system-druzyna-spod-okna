@@ -5,11 +5,7 @@ import java.util.List;
 
 public abstract class Value {
 
-    public List<String> getInputPattern() {
-        return null;
-    }
+    abstract public List<String> getInputPattern();
 
-    public boolean getSelectionType() {
-        return true;
-    }
+    abstract public boolean getSelectionType();
 }
