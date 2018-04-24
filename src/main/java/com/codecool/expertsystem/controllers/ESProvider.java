@@ -5,9 +5,12 @@ import com.codecool.expertsystem.views.*;
 
 public class ESProvider {
 
-    String answer;
+    private FactRepository factRepository;
+    private RuleRepository ruleRepository;
 
-    public ESProvider(FactParser factParser, RuleParser RuleParser) {
+    public ESProvider(FactParser factParser, RuleParser ruleParser) {
+        this.factRepository = factParser.getFactRepository();
+        this.ruleRepository = ruleParser.getRuleRepository();
 
     }
 
@@ -16,7 +19,7 @@ public class ESProvider {
     }
 
     public String getAnswerByQuestion(String questionId) {
-        return answer;
+        return "";
     }
 
     public String evaluate() {
