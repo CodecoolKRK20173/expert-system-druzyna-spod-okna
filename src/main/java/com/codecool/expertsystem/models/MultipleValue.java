@@ -11,4 +11,14 @@ public class MultipleValue extends Value {
         this.param = param;
         this.selectionType = selectionType;
     }
+
+    @Override
+    public List<String> getInputPattern() {
+        return param;
+    }
+
+    @Override
+    public boolean getSelectionType() {
+        return selectionType;
+    }
 }
