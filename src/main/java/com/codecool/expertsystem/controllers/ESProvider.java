@@ -34,6 +34,22 @@ public class ESProvider {
     }
 
     public String evaluate() {
-        return null;
+        FactIterator factIterator = new FactIterator(this.factRepository);
+        boolean foundMatch = false;
+        Fact currentFact = null;
+        while (factIterator.hasNext() && !foundMatch) {
+            currentFact = factIterator.next();
+            foundMatch = validateFact(currentFact);
+        }
+        return currentFact.getDescription();
+    }
+
+    private boolean validateFact(Fact fact) {
+        for (String key : mapOfAnswers.keySet()) {
+            if (mapOfAnswers.get(key) != fact.getValueById(key)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
