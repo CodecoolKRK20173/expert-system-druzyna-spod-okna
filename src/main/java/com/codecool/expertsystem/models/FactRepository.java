@@ -19,6 +19,6 @@ public class FactRepository {
 
 
     public Iterator<Fact> getIterator() {
-        return null;
+        return new FactIterator(factList);
     }
 }
