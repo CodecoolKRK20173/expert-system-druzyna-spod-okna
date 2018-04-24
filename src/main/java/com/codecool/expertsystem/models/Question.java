@@ -6,6 +6,10 @@ public class Question {
     String question;
     Answer answer;
 
+    public Question () {
+
+    }
+
     public Question(String id, String question, Answer answer) {
         this.id = id;
         this.question = question;
@@ -13,15 +17,15 @@ public class Question {
     }
 
     public String getId() {
-        return null;
+        return id;
     }
 
     public  String getQuestion() {
-        return null;
+        return question;
     }
 
     public Answer getAnswer() {
-        return null;
+        return answer;
     }
 
     public boolean getEvaluatedAnswer(String input) {

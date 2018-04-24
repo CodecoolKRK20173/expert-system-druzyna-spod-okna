@@ -1,12 +1,14 @@
 package com.codecool.expertsystem.models;
 
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.ArrayList;
 
 public class RuleRepository {
 
-    List<Question> questions = new ArrayList<>();
+    List<Question> questions = new ArrayList<Question>();
+    Question question = new Question();
     
     public void addQuestion(Question question) {
         questions.add(question);
@@ -17,6 +19,6 @@ public class RuleRepository {
     }
 
     public Iterator<Question> getIterator() {
-        return null;
+        return new QuestionIterator(this);
     }
 }
