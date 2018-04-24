@@ -12,14 +12,7 @@ public class Answer {
     public boolean evaluateAnswerByInput(String input) {
         fillArrayWithZeros();
         splittedInputList = splitString(input);
-
-        for (String elem : splittedInputList) {
-            for (int i=0; i<values.size(); i++) {
-                if (values.get(i).getInputPattern().contains(elem)) {
-                    rate[i] += 1; 
-                }
-            }
-        }
+        setAnswerRates();        
         return values.get(getIndexOfMaxElement()).getSelectionType();
     }
 
@@ -34,6 +27,16 @@ public class Answer {
     private void fillArrayWithZeros() {
         for(int i=0; i<rate.length; i++) {
             rate[i] = 0;
+        }
+    }
+
+    private void setAnswerRates() {
+        for (String elem : splittedInputList) {
+            for (int i=0; i<values.size(); i++) {
+                if (values.get(i).getInputPattern().contains(elem)) {
+                    rate[i] += 1; 
+                }
+            }
         }
     }
     
