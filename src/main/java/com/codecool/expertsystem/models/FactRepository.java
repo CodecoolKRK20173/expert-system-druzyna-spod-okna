@@ -11,7 +11,7 @@ public class FactRepository {
     public FactRepository() {
         this.facts = new ArrayList<>();
     }
-    
+
     public void addFact(Fact fact) {
         facts.add(fact);
     }
@@ -21,6 +21,6 @@ public class FactRepository {
     }
 
     public Iterator<Fact> getIterator() {
-        return new FactIterator(factList);
+        return new FactIterator(this);
     }
 }
