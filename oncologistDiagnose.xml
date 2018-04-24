@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Facts>
+    <Fact id="MalThyroid">
+        <Description value="Malignant Thyroid Cancer (złośliwy nowotwór tarczycy)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>             <!-- TFF FT -->
+    ...
+    <Fact id="MetMalThyroid">
+        <Description value="Metastatic Malignant Thyroid Cancer (złośliwy nowotwór tarczycy z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>          <!-- TFF TT -->
+    ...
+    <Fact id="MetThyroid">
+        <Description value="Metastatic Thyroid Cancer (nowotwór tarczycy z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>             <!-- TFF TF -->
+    ...
+    <Fact id="Thyroid">
+        <Description value="Thyroid Cancer (nowotwór tarczycy)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>                <!-- TFF FF -->
+    ...
+
+
+    <Fact id="MalSkin">
+        <Description value="Malignant Skin Cancer (złośliwy nowotwór skóry)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>                <!-- FTF FT-->
+    ...
+    <Fact id="MetMalSkin">
+        <Description value="Metastatic Malignant Skin Cancer (złośliwy nowotwór skóry z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>             <!-- FTF TT-->
+    ...
+    <Fact id="MetSkin">
+        <Description value="Metastatic Skin Cancer (nowotwór skóry z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>                <!-- FTF TF-->
+    ...
+    <Fact id="Skin">
+        <Description value="Skin Cancer (nowotwór skóry)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>                   <!-- FTF FF-->
+    ...
+
+
+    <Fact id="MalBone">
+        <Description value="Malignant Bone Cancer (złośliwy nowotwór kości)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>                <!-- FFT FT-->
+    ...
+    <Fact id="MetMalBone">
+        <Description value="Metastatic Malignant Bone Cancer (złośliwy nowotwór kości z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>             <!-- FFT TT-->
+    ...
+    <Fact id="MetBone">
+        <Description value="Metastatic Bone Cancer (nowotwór kości z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>                <!-- FFT TF-->
+    ...
+    <Fact id="Bone">
+        <Description value="Bone Cancer (nowotwór kości)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>                   <!-- FFT FF-->
+    ...
+
+
+    <Fact id="MalLarynx">
+        <Description value="Malignant Larynx Cancer (złośliwy nowotwór krtani)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>              <!-- TTF FT-->
+    ...
+    <Fact id="MetMalLarynx">
+        <Description value="Metastatic Malignant Larynx Cancer (złośliwy nowotwór krtani z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>           <!-- TTF TT-->
+    ...
+    <Fact id="MetLarynx">
+        <Description value="Metastatic Larynx Cancer (nowotwór krtani z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>              <!-- TTF TF-->
+    ...
+    <Fact id="Larynx">
+        <Description value="Larynx Cancer (nowotwór krtani)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>                 <!-- TTF FF-->
+    ...
+
+
+    <Fact id="MalTissue">
+        <Description value="Malignant Tissue Cancer (złośliwy nowotwór tkanek miękkich)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>              <!-- FTT FT-->
+    ...
+    <Fact id="MetMalTissue">
+        <Description value="Metastatic Malignant Tissue Cancer (złośliwy nowotwór tkanek miękkich z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>           <!-- FTT TT-->
+    ...
+    <Fact id="MetTissue">
+        <Description value="Metastatic Tissue Cancer (nowotwór tkanek miękkich z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>              <!-- FTT TF-->
+    ...
+    <Fact id="Tissue">
+        <Description value="Tissue Cancer (nowotwór tkanek miękkich)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>                 <!-- FTT FF-->
+    ...
+
+
+    <Fact id="MalPancreatic">
+        <Description value="Malignant Pancreatic Cancer (złośliwy nowotwór trzustki)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>          <!-- TFT FT-->
+    ...
+    <Fact id="MetMalPancreatic">
+        <Description value="Metastatic Malignant Pancreatic Cancer (złośliwy nowotwór trzustki z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+</Fact>       <!-- TFT TT-->
+    ...
+    <Fact id="MetPancreatic">
+        <Description value="Metastatic Pancreatic Cancer (nowotwór trzustki z przerzutami)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>          <!-- TFT TF-->
+    ...
+    <Fact id="Pancreatic">
+        <Description value="Pancreatic Cancer (nowotwór trzustki)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>             <!-- TFT FF-->
+    ...
+
+    <Fact id="AIDS">
+        <Description value="AIDS (Zespół nabytego niedoboru odporności)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>                   <!-- TTT TT-->
+    ...
+    <Fact id="Lymphadenopathy">
+        <Description value="Lymphadenopathy (Limfadenopatia)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>        <!-- TTT FF-->
+    ...
+    <Fact id="Ischemic">
+        <Description value="Ischemic Heart Disease (Choroba niedokrwienna serca)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>               <!-- TTT FT-->
+    ...
+    <Fact id="Insufficiency">
+        <Description value="Chronic cardiac insufficiency (Przewlekła niewydolność serca)"/>
+        <Evals>
+            <Eval id="throatProblems">true</Eval>
+            <Eval id="skinProblems">true</Eval>
+            <Eval id="bonesProblems">true</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>          <!-- TTT TF-->
+    ...
+
+
+    <Fact id="Mental">
+        <Description value="Mental illness (choroba psychiczna)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>                 <!-- FFF FF-->
+    ...
+    <Fact id="Atherosclerosis">
+        <Description value="Atherosclerosis (miażdżyca)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">false</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>        <!-- FFF FT-->
+    ...
+    <Fact id="Anemia">
+        <Description value="Anemia (niedokrwistość)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">false</Eval>
+        </Evals>
+    </Fact>                 <!-- FFF TF-->
+    ...
+    <Fact id="Hepatitis">
+        <Description value="Hepatitis (zapalenie wątroby)"/>
+        <Evals>
+            <Eval id="throatProblems">false</Eval>
+            <Eval id="skinProblems">false</Eval>
+            <Eval id="bonesProblems">false</Eval>
+            <Eval id="otherProblems">true</Eval>
+            <Eval id="junkFood">true</Eval>
+        </Evals>
+    </Fact>              <!-- FFF TT-->
+    ...
+
+</Facts>
