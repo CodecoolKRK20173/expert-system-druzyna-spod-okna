@@ -1,5 +1,6 @@
 package com.codecool.expertsystem.views;
 
-public class View {
-    
+public class UserInterface {
+
+
 }
