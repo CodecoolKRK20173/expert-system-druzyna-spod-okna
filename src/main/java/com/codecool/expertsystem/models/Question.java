@@ -28,6 +28,10 @@ public class Question {
     }
 
     public boolean getEvaluatedAnswer(String input) {
-        return true;
+        Answer answer = new Answer();
+        if (answer.evaluateAnswerByInput(input)) {
+            return true;
+        }
+        return false;
     }
 }
