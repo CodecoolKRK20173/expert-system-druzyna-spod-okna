@@ -6,17 +6,19 @@ import java.util.Iterator;
 
 public class FactRepository {
 
-    private List<Fact> factList;
+    private List<Fact> facts;
 
     public FactRepository() {
-        this.factList = new ArrayList<>();
+        this.facts = new ArrayList<>();
     }
-
-
+    
     public void addFact(Fact fact) {
-        this.factList.add(fact);
+        facts.add(fact);
     }
 
+    public List<Fact> getFacts() {
+        return facts;
+    }
 
     public Iterator<Fact> getIterator() {
         return new FactIterator(factList);
