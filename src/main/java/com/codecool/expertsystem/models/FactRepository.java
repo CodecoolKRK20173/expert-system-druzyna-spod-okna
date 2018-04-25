@@ -11,7 +11,7 @@ public class FactRepository {
     public FactRepository() {
         this.facts = new ArrayList<>();
     }
-    
+
     public void addFact(Fact fact) {
         facts.add(fact);
     }

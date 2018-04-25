@@ -21,7 +21,7 @@ public class Answer {
     }
 
     public void addValue(Value value) {
-
+        values.add(value);
     }
 
     private List<String> splitString(String input) {
@@ -57,5 +57,9 @@ public class Answer {
             return true;
         }
         return false;
+    }
+
+    public List<Value> getValues() {
+        return values;
     }
 }

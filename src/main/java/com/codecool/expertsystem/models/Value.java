@@ -1,15 +1,12 @@
 package com.codecool.expertsystem.models;
 
 import java.util.List;
+import java.util.ArrayList;
 
 
 public abstract class Value {
 
-    public List<String> getInputPattern() {
-        return null;
-    }
+    abstract public List<String> getInputPattern();
 
-    public boolean getSelectionType() {
-        return true;
-    }
+    abstract public boolean getSelectionType();
 }
