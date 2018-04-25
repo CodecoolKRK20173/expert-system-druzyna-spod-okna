@@ -45,14 +45,9 @@ public class Answer {
     }
     
     private int getIndexOfMaxElement() {
-        int index = -1;
         Integer max = Collections.max(Arrays.asList(rate));
-        for (int i=0; i<rate.length; i++) {
-            if (rate[i] == max && !max.equals(0)) {
-                index = i;
-                break;
-            }
-        }
+        int index = Arrays.asList(rate).indexOf(max);
+       
         return index;
     }
 
