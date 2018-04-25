@@ -8,6 +8,7 @@ public class QuestionIterator implements Iterator<Question> {
     private int index;
     private List<Question> questions;
 
+
     public QuestionIterator(RuleRepository ruleRepository) {
         this.index = 0;
         this.questions = ruleRepository.getQuestions();
@@ -20,8 +21,8 @@ public class QuestionIterator implements Iterator<Question> {
 
     @Override
     public Question next() {
-        Question question = questions.get(index);
+        Question entry = questions.get(index);
         index++;
-        return question;
+        return entry;
         }
     }
