@@ -2,12 +2,9 @@ package com.codecool.expertsystem.models;
 
 public class Question {
 
-    String id;
-    String question;
-    Answer answer;
-
-    public Question () {
-    }
+    private String id;
+    private String question;
+    private Answer answer;
 
     public Question(String id, String question, Answer answer) {
         this.id = id;
@@ -28,10 +25,7 @@ public class Question {
     }
 
     public boolean getEvaluatedAnswer(String input) {
-        Answer answer = new Answer();
-        if (answer.evaluateAnswerByInput(input)) {
-            return true;
-        }
-        return false;
+        return answer.evaluateAnswerByInput(input);
+
     }
 }
