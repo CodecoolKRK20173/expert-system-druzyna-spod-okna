@@ -25,7 +25,7 @@ public class ESProvider {
         while (questionIterator.hasNext()) {
             Question nextQuestion = questionIterator.next();
             String answer = getAnswerByQuestion(nextQuestion);
-            boolean answerAsBoolean = nextQuestion.getAnswer().evaluateByInput(answer);
+            boolean answerAsBoolean = nextQuestion.getAnswer().evaluateAnswerByInput(answer);
             String answerId = nextQuestion.getId();
             mapOfAnswers.put(answerId, answerAsBoolean);
         }
