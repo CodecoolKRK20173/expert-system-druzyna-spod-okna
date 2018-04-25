@@ -17,6 +17,6 @@ public class RuleRepository {
     }
 
     public Iterator<Question> getIterator() {
-        return null;
+        return new QuestionIterator(this);
     }
 }
