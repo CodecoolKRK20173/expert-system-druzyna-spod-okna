@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 public class RuleRepository {
 
-    List<Question> questions = new ArrayList<>();
+    List<Question> questions = new ArrayList<Question>();
     
-    public void addQuestion(Question question) {
+    void addQuestion(Question question) {
         questions.add(question);
     }
 
-    public List<Question> getQuestions() {
+    List<Question> getQuestions() {
         return this.questions;
     }
 
