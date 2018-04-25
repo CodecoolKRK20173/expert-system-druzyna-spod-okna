@@ -3,6 +3,7 @@ package com.codecool.expertsystem.models;
 import java.util.List;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.InputMismatchException;
 
 public class Answer {
     List<Value> values;
@@ -12,7 +13,10 @@ public class Answer {
     public boolean evaluateAnswerByInput(String input) {
         fillArrayWithZeros();
         splittedInputList = splitString(input);
-        setAnswerRates();        
+        setAnswerRates();
+        if (!hasMatch()) {
+            throw new InputMismatchException();
+        }     
         return values.get(getIndexOfMaxElement()).getSelectionType();
     }
 
@@ -52,7 +56,7 @@ public class Answer {
         return index;
     }
 
-    public boolean getMatch() {
+    public boolean hasMatch() {
         for (int i=0; i<rate.length; i++) {
             if (rate[i] != 0)
             return true;
