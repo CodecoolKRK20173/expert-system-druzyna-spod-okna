@@ -1,9 +1,9 @@
 package com.codecool.expertsystem;
 
-import com.codecool.expertsystem.controllers.ESProvider;
 import com.codecool.expertsystem.models.FactParser;
 import com.codecool.expertsystem.models.RuleParser;
 import com.codecool.expertsystem.views.UserInterface;
+import com.codecool.expertsystem.controllers.ESProvider;
 
 public class Main {
 
