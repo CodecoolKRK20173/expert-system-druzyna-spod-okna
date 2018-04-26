@@ -8,6 +8,10 @@ public class FactIterator implements Iterator<Fact> {
     private int index;
     private List<Fact> facts;
 
+    /**
+     *
+     * @param factRepository - FactRepository
+     */
     public FactIterator(FactRepository factRepository) {
         this.index = 0;
         this.facts = factRepository.getFacts();

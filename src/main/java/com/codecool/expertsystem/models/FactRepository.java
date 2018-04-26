@@ -1,21 +1,33 @@
 package com.codecool.expertsystem.models;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class FactRepository {
 
-    private List<Fact> facts = new ArrayList<Fact>();
+    private List<Fact> facts = new ArrayList<>();
 
-    void addFact(Fact fact) {
+    /**
+     * Adds Fact to facts list
+     * @param fact - Fact
+     */
+    public void addFact(Fact fact) {
         facts.add(fact);
     }
 
-    List<Fact> getFacts() {
+    /**
+     * Return list of all Facts added to this repository
+     * @return List<Fact>
+     */
+    public List<Fact> getFacts() {
         return facts;
     }
 
+    /**
+     * Constructs and return FactIterator
+     * @return FactIterator
+     */
     public Iterator<Fact> getIterator() {
         return new FactIterator(this);
     }
