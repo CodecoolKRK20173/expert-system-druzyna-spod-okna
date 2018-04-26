@@ -18,10 +18,17 @@ public class FactIterator implements Iterator<Fact> {
     private int index;
     private List<Fact> facts;
 
+<<<<<<< HEAD
  /**
    * Constructor creating an Iterator object to iterate over collection of Fact objects.
    * @param factRepository Parameter to add collection of Fact objects to constructor.
    */
+=======
+    /**
+     *
+     * @param factRepository - FactRepository
+     */
+>>>>>>> d2f75a65c0a21f012589fc5d27bc76cd97d94d89
     public FactIterator(FactRepository factRepository) {
         this.index = 0;
         this.facts = factRepository.getFacts();
