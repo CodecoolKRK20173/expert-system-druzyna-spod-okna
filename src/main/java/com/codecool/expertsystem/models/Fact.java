@@ -1,14 +1,12 @@
 package com.codecool.expertsystem.models;
 
-import java.util.Set;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Fact {
 
-    String id;
-    String description;
-    Map<String, Boolean> evalsMap;
+    private String id;
+    private String description;
+    private Map<String, Boolean> evalsMap;
 
     public Fact(String id, String description) {
         this.id = id;
@@ -16,27 +14,44 @@ public class Fact {
         this.evalsMap = new TreeMap<>();
     }
 
-
+    /**
+     * Returns Fact id as String. Id is needed to evaluate Fact
+     * @return String
+     */
     public String getFactId() {
         return this.id;
     }
 
-
+    /**
+     * Returns key set of Fact evaluation map
+     * @return Set<String>
+     */
     public Set<String> getIdSet() {
         return evalsMap.keySet();
     }
 
-
+    /**
+     * Puts to map by evaluate id of Fact with given boolean evaluate value
+     * @param id - String
+     * @param value - boolean
+     */
     public void setFactValueById(String id, boolean value) {
         this.evalsMap.put(id, value);
     }
 
-
+    /**
+     * Return boolean value of Fact from evaluation map by given id
+     * @param id - String
+     * @return boolean
+     */
     public boolean getValueById(String id) {
         return evalsMap.get(id);
     }
 
-
+    /**
+     * Returns Fact description
+     * @return String
+     */
     public String getDescription() {
         return this.description;
     }
