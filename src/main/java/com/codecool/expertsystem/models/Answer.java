@@ -1,14 +1,15 @@
 package com.codecool.expertsystem.models;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.InputMismatchException;
 
 public class Answer {
-    private List<Value> values;
+    private List<Value> values = new ArrayList<>();
     private List<String> splittedInputList;
-    private Integer[] rate = new Integer[values.size()];
+    private Integer[] rate;
 
     public boolean evaluateAnswerByInput(String input) {
         splittedInputList = splitString(input);
@@ -28,6 +29,7 @@ public class Answer {
     }
 
     private void setAnswerRates() {
+        rate = new Integer[values.size()];
         Arrays.fill(rate, 0);
         for (String elem : splittedInputList) {
             for (int i=0; i<values.size(); i++) {
