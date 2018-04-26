@@ -14,9 +14,20 @@ public class ESProvider {
     private RuleRepository ruleRepository;
     private Map<String, Boolean> mapOfAnswers = new LinkedHashMap<>();
 
+    /**
+     * Constructor for ESProvider
+     * @param factParser Object used for parsing XML file containing Fact's object data
+     * @param ruleParser Object used for parsing XML file containing Question's object data
+     */
     public ESProvider(FactParser factParser, RuleParser ruleParser) {
         this.factRepository = factParser.getFactRepository();
         this.ruleRepository = ruleParser.getRuleRepository();
+    }
+
+    /**
+     * Handle ESProvider behaviour
+     */
+    public void startDiagnose() {
         collectAnswers();
         String diagnose = evaluate();
         UserInterface.showDiagnose(diagnose);

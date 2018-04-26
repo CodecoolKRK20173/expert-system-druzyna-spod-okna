@@ -10,6 +10,7 @@ public class Main {
 
         FactParser factParser = new FactParser("src/main/resources/oncologistDiagnose.xml");
         RuleParser ruleParser = new RuleParser("src/main/resources/oncologistQuestions.xml");
-        new ESProvider(factParser, ruleParser);
+        ESProvider esProvider = new ESProvider(factParser, ruleParser);
+        esProvider.startDiagnose();
     }
 }
