@@ -19,7 +19,7 @@ public class Main {
     }
 
 
-    public static void filesNotFound() {
+    public static void resourcesNotFound() {
         failedLoadingResources = true;
     }
 }

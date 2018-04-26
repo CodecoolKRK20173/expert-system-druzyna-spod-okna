@@ -22,7 +22,7 @@ public abstract class XMLParser {
             this.doc = docBuilder.parse(xmlFile);
             this.doc.getDocumentElement().normalize();
         } catch (Exception err) {
-            Main.filesNotFound();
+            Main.resourcesNotFound();
             err.printStackTrace();
         }
     }
