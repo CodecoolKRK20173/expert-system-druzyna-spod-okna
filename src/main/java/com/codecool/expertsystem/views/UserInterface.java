@@ -26,6 +26,7 @@ public class UserInterface {
      * @param diagnose
      */
     public static void showDiagnose(String diagnose) {
+        clearScreen();
         System.out.println("Opinion of our expert: ");
         System.out.println("~~" + diagnose + "~~");
         printSeparator();
@@ -33,5 +34,23 @@ public class UserInterface {
 
     private static void printSeparator() {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    }
+
+    /**
+     * Show welcome screen
+     */
+    public static void showWelcome() {
+        clearScreen();
+        printSeparator();
+        System.out.println("Welcome to Full Professional Expert Diagnose Program!");
+        System.out.println("Please answer following questions:");
+    }
+
+    /**
+     * clear console
+     */
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }

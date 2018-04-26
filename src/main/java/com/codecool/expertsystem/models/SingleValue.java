@@ -27,7 +27,7 @@ public class SingleValue extends Value {
 
     @Override
     public List<String> getInputPattern() {
-        ArrayList list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<String>();
         list.add(param);
         return list;
     }

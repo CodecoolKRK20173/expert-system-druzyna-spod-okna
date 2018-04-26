@@ -18,7 +18,7 @@ public class QuestionIterator implements Iterator<Question> {
     private int index;
     private List<Question> questions;
 
- /**
+    /**
    * Constructor creating an Iterator object to iterate over collection of Question objects.
    * @param factRepository Parameter to add collection of Question objects to constructor.
    */
