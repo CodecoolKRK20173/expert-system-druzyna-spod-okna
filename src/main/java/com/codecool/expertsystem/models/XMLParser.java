@@ -1,5 +1,6 @@
 package com.codecool.expertsystem.models;
 
+import com.codecool.expertsystem.Main;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
@@ -21,6 +22,7 @@ public abstract class XMLParser {
             this.doc = docBuilder.parse(xmlFile);
             this.doc.getDocumentElement().normalize();
         } catch (Exception err) {
+            Main.filesNotFound();
             err.printStackTrace();
         }
     }
