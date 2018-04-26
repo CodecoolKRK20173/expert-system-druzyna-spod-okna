@@ -9,6 +9,10 @@ public abstract class XMLParser {
 
     protected Document doc;
 
+    /**
+     * Opens an XML file and constructs document
+     * @param xmlPath - String
+     */
     public void loadXMLDocument(String xmlPath) {
         try {
             File xmlFile = new File(xmlPath);
@@ -21,7 +25,10 @@ public abstract class XMLParser {
         }
     }
 
-
+    /**
+     * Return constructed XML document
+     * @return Document
+     */
     public Document getDoc() {
         return this.doc;
     }
