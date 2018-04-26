@@ -5,7 +5,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
 public class FactParser extends XMLParser {
-
+    /**
+     *
+     * @param xmlPath - String, path of XML file
+     */
     public FactParser(String xmlPath) {
         loadXMLDocument(xmlPath);
     }

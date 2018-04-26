@@ -8,6 +8,11 @@ public class Fact {
     private String description;
     private Map<String, Boolean> evalsMap;
 
+    /**
+     *
+     * @param id - String, id of Fact parsed from XML file
+     * @param description - String, description of Fact parsed from XML file
+     */
     public Fact(String id, String description) {
         this.id = id;
         this.description = description;
