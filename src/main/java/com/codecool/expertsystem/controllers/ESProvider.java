@@ -33,6 +33,9 @@ public class ESProvider {
         UserInterface.showDiagnose(diagnose);
     }
 
+    /**
+     * Method used for creating mapOfAnswers (LinkedHashMap)
+     */
     private void collectAnswers() {
         QuestionIterator questionIterator = new QuestionIterator(this.ruleRepository);
         while (questionIterator.hasNext()) {
@@ -43,6 +46,12 @@ public class ESProvider {
         }
     }
 
+    /**
+     * Method asks user for input until he gives correct one
+     * then returns it as boolean
+     * @param question Object used for storing question (string) and possible answers
+     * @return user input as boolean
+     */
     private boolean getValidAnswerAsBoolean(Question question) {
         boolean exceptionOccurred;
         boolean isAnswerValid = false;
@@ -60,11 +69,21 @@ public class ESProvider {
         return isAnswerValid;
     }
 
+    /**
+     * Method prints to user question (String) from Question object
+     * then returns user answer
+     * @param questionObj Object used for storing question (string)
+     * @return user input as string
+     */
     private String getAnswerByQuestion(Question questionObj) {
         UserInterface.askQuestion(questionObj.getQuestion());
         return UserInterface.getAnswer();
     }
 
+    /**
+     * Method compares user answers with possible facts
+     * @return description of matching fact
+     */
     private String evaluate() {
         Iterator factIterator = this.factRepository.getIterator();
         boolean foundMatch = false;
@@ -73,13 +92,28 @@ public class ESProvider {
             currentFact = (Fact) factIterator.next();
             foundMatch = validateFact(currentFact);
         }
-        String result = currentFact.getDescription();
+        return getDescriptionOfFact(currentFact);
+    }
+
+    /**
+     * Method gets desciption of given fact,
+     * and prevents NullPointerException
+     * @param fact object containing description
+     * @return description of given fact
+     */
+    private String getDescriptionOfFact(Fact fact) {
+        String result = fact.getDescription();
         if (result == null) {
             return "Error occurred!";
         }
         return result;
     }
 
+    /**
+     * Method checks if user answers match given fact
+     * @param fact object to compare user answers with
+     * @return if given fact matches
+     */
     private boolean validateFact(Fact fact) {
         for (String key : mapOfAnswers.keySet()) {
             if (mapOfAnswers.get(key) != fact.getValueById(key)) {
