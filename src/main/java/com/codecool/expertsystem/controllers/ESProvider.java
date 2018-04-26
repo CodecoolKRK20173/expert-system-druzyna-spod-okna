@@ -3,6 +3,7 @@ package com.codecool.expertsystem.controllers;
 import com.codecool.expertsystem.models.*;
 import com.codecool.expertsystem.views.UserInterface;
 
+import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -24,12 +25,28 @@ public class ESProvider {
     private void collectAnswers() {
         QuestionIterator questionIterator = new QuestionIterator(this.ruleRepository);
         while (questionIterator.hasNext()) {
-            Question nextQuestion = questionIterator.next();
-            String answer = getAnswerByQuestion(nextQuestion);
-            boolean answerAsBoolean = nextQuestion.getAnswer().evaluateAnswerByInput(answer);
-            String answerId = nextQuestion.getId();
+            Question question = questionIterator.next();
+            boolean answerAsBoolean = getValidAnswerAsBoolean(question);
+            String answerId = question.getId();
             mapOfAnswers.put(answerId, answerAsBoolean);
         }
+    }
+
+    private boolean getValidAnswerAsBoolean(Question question) {
+        boolean exceptionOccurred;
+        boolean isAnswerValid = false;
+        String answer;
+        do {
+            answer = getAnswerByQuestion(question);
+            exceptionOccurred = false;
+            try {
+                isAnswerValid = question.getEvaluatedAnswer(answer);
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input!");
+                exceptionOccurred = true;
+            }
+        } while (exceptionOccurred);
+        return isAnswerValid;
     }
 
     private String getAnswerByQuestion(Question questionObj) {
