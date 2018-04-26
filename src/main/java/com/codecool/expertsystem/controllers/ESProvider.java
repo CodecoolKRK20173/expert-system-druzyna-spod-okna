@@ -45,7 +45,11 @@ public class ESProvider {
             currentFact = (Fact) factIterator.next();
             foundMatch = validateFact(currentFact);
         }
-        return currentFact.getDescription();
+        String result = currentFact.getDescription();
+        if (result == null) {
+            return "Error occurred!";
+        }
+        return result;
     }
 
     private boolean validateFact(Fact fact) {
