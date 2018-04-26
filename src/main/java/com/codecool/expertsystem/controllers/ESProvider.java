@@ -3,6 +3,7 @@ package com.codecool.expertsystem.controllers;
 import com.codecool.expertsystem.models.*;
 import com.codecool.expertsystem.views.UserInterface;
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -37,11 +38,11 @@ public class ESProvider {
     }
 
     public String evaluate() {
-        FactIterator factIterator = new FactIterator(this.factRepository);
+        Iterator factIterator = this.factRepository.getIterator();
         boolean foundMatch = false;
         Fact currentFact = null;
         while (factIterator.hasNext() && !foundMatch) {
-            currentFact = factIterator.next();
+            currentFact = (Fact) factIterator.next();
             foundMatch = validateFact(currentFact);
         }
         return currentFact.getDescription();
