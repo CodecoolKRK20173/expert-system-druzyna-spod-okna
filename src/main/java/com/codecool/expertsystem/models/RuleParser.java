@@ -8,12 +8,27 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
+/**
+ * <h1>RuleParser</h1>
+ * Parse xmlDocument , collect data & store it in RuleRepository object
+ * @author pkaminski
+ * @version 1.0
+ */
 public class RuleParser extends XMLParser {
 
+    /**
+     * Constructor
+     * load .xml file & get doc obj
+     * @param String xml file path
+     */
     public RuleParser(String xmlPath) {
         loadXMLDocument(xmlPath);
     }
 
+    /**
+     * Create RuleRepository instance
+     * @return RuleRepository
+     */
     public RuleRepository getRuleRepository() {
         RuleRepository ruleRepository = new RuleRepository();
         NodeList nodeList = doc.getElementsByTagName("Rule");
@@ -28,6 +43,11 @@ public class RuleParser extends XMLParser {
         return ruleRepository;
     }
 
+    /**
+     * Collect data from doc object & create Question object
+     * @param xmlRule xml element tag<Rule>
+     * @return Question
+     */
     private Question parseXmlRuleQuestion(Element xmlRule) {
         String id = xmlRule.getAttribute("id");
         String questionStr = xmlRule.getElementsByTagName("Question").item(0).getTextContent();
@@ -35,6 +55,11 @@ public class RuleParser extends XMLParser {
         return new Question(id, questionStr, answer);
     }
 
+    /**
+     * Create Answer object
+     * @param xmlAnswer xml element tag<Selection>
+     * @return Answer
+     */
     private Answer parseXmlRuleAnswer(Element xmlAnswer) {
         NodeList selectionList = xmlAnswer.getElementsByTagName("Selection");
         Answer answer = new Answer();
@@ -45,6 +70,10 @@ public class RuleParser extends XMLParser {
         return answer;
     }
 
+    /**
+     * @param selection xml node tag<Selection>
+     * @return Value
+     */
     private Value getValueObj(Node selection) {
         NodeList childList = selection.getChildNodes();
         for (int j = 0; j < childList.getLength(); j++) {
@@ -55,6 +84,12 @@ public class RuleParser extends XMLParser {
         return null;
     }
 
+    /**
+     * Collect data from doc object & create Value object
+     * @param child xml element tag<SingleValue> or <MultipleValue>
+     * @param parent xml element tag<Selection>
+     * @return Value object
+     */
     private Value getValueInstance(Element child, Element parent) {
         String attrName = "value";
 

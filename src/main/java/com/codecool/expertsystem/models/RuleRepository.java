@@ -7,7 +7,10 @@ import java.util.ArrayList;
 public class RuleRepository {
 
     List<Question> questions = new ArrayList<Question>();
-    
+
+    /**
+     * Add Question object to List
+     */
     void addQuestion(Question question) {
         questions.add(question);
     }
@@ -16,6 +19,9 @@ public class RuleRepository {
         return this.questions;
     }
 
+    /**
+     * @return QuestionIterator
+     */
     public Iterator<Question> getIterator() {
         return new QuestionIterator(this);
     }

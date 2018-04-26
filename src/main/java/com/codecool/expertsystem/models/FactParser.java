@@ -8,12 +8,18 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class FactParser extends XMLParser {
-
+    /**
+     *
+     * @param xmlPath - String, path of XML file
+     */
     public FactParser(String xmlPath) {
         loadXMLDocument(xmlPath);
     }
 
-
+    /**
+     * Creates FactRepository and adds to it Facts parsed from XML document
+     * @return FactRepository
+     */
     public FactRepository getFactRepository() {
         FactRepository factRepository = new FactRepository();
         NodeList nodeList = doc.getElementsByTagName("Fact");
@@ -27,13 +33,22 @@ public class FactParser extends XMLParser {
         return factRepository;
     }
 
-
+    /**
+     * Parse XML nodes to Fact
+     * @param xmlFact - Element
+     * @return Fact
+     */
     private Fact parseXmlFactToObject(Element xmlFact) {
         Element description = (Element) xmlFact.getElementsByTagName("Description").item(0);
         return new Fact(xmlFact.getAttribute("id"), description.getAttribute("value"));
     }
 
-
+    /**
+     * Parse XML fact values to Fact values and assign them to Fact
+     * @param xmlFact - Element
+     * @param parsedFact - Fact
+     * @return Fact
+     */
     private Fact getSettedFactValues(Element xmlFact, Fact parsedFact) {
         Element evals = (Element) xmlFact.getElementsByTagName("Evals").item(0);
         for (int j = 0; j < evals.getElementsByTagName("Eval").getLength(); j++) {
