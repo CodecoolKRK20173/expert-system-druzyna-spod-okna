@@ -21,7 +21,7 @@ public class ESProvider {
         UserInterface.showDiagnose(diagnose);
     }
 
-    public void collectAnswers() {
+    private void collectAnswers() {
         QuestionIterator questionIterator = new QuestionIterator(this.ruleRepository);
         while (questionIterator.hasNext()) {
             Question nextQuestion = questionIterator.next();
@@ -32,12 +32,12 @@ public class ESProvider {
         }
     }
 
-    public String getAnswerByQuestion(Question questionObj) {
+    private String getAnswerByQuestion(Question questionObj) {
         UserInterface.askQuestion(questionObj.getQuestion());
         return UserInterface.getAnswer();
     }
 
-    public String evaluate() {
+    private String evaluate() {
         Iterator factIterator = this.factRepository.getIterator();
         boolean foundMatch = false;
         Fact currentFact = null;
