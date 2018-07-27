@@ -93,10 +93,10 @@ public class RuleParser extends XMLParser {
         String attrName = "value";
 
         if (child.getTagName().equals("SingleValue")) {
-            return new SingleValue(child.getAttribute(attrName), (parent.getAttribute(attrName).equals("true")?true:false));        
+            return new SingleValue(child.getAttribute(attrName), (parent.getAttribute(attrName).equals("true")));
         } else if (child.getTagName().equals("MultipleValue")) {
             ArrayList<String> valueList = new ArrayList<String>(Arrays.asList(child.getAttribute(attrName).split(",")));
-            return new MultipleValue(valueList, (parent.getAttribute(attrName).equals("true")?true:false));            
+            return new MultipleValue(valueList, (parent.getAttribute(attrName).equals("true")));
         } else {
             return null;
         }

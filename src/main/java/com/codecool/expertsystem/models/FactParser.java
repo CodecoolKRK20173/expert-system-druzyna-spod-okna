@@ -1,12 +1,10 @@
 package com.codecool.expertsystem.models;
 
 import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
 public class FactParser extends XMLParser {
     /**
-     *
      * @param xmlPath - String, path of XML file
      */
     public FactParser(String xmlPath) {
@@ -15,6 +13,7 @@ public class FactParser extends XMLParser {
 
     /**
      * Creates FactRepository and adds to it Facts parsed from XML document
+     *
      * @return FactRepository
      */
     public FactRepository getFactRepository() {
@@ -22,16 +21,17 @@ public class FactParser extends XMLParser {
         NodeList nodeList = doc.getElementsByTagName("Fact");
         for (int i = 0; i < nodeList.getLength(); i++) {
             Element xmlFact = (Element) nodeList.item(i);
-            if (xmlFact.getNodeType() == Node.ELEMENT_NODE) {
+//            if (xmlFact.getNodeType() == Node.ELEMENT_NODE) {
                 Fact parsedFact = parseXmlFactToObject(xmlFact);
-                factRepository.addFact(getSettedFactValues(xmlFact, parsedFact));
-            }
+                factRepository.addFact(getSetFactValues(xmlFact, parsedFact));
+//            }
         }
         return factRepository;
     }
 
     /**
      * Parse XML nodes to Fact
+     *
      * @param xmlFact - Element
      * @return Fact
      */
@@ -42,16 +42,18 @@ public class FactParser extends XMLParser {
 
     /**
      * Parse XML fact values to Fact values and assign them to Fact
-     * @param xmlFact - Element
+     *
+     * @param xmlFact    - Element
      * @param parsedFact - Fact
      * @return Fact
      */
-    private Fact getSettedFactValues(Element xmlFact, Fact parsedFact) {
+    private Fact getSetFactValues(Element xmlFact, Fact parsedFact) {
         Element evals = (Element) xmlFact.getElementsByTagName("Evals").item(0);
         for (int j = 0; j < evals.getElementsByTagName("Eval").getLength(); j++) {
             Element eval = (Element) evals.getElementsByTagName("Eval").item(j);
             String booleanValue = eval.getTextContent();
             parsedFact.setFactValueById(eval.getAttribute("id"), Boolean.valueOf(booleanValue));
-        } return parsedFact;
+        }
+        return parsedFact;
     }
 }

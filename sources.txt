@@ -1,1 +1,17 @@
 src/main/java/com/codecool/expertsystem/Main.java
+src/main/java/com/codecool/expertsystem/models/RuleParser.java
+src/main/java/com/codecool/expertsystem/models/FactIterator.java
+src/main/java/com/codecool/expertsystem/models/QuestionIterator.java
+src/main/java/com/codecool/expertsystem/models/FactRepository.java
+src/main/java/com/codecool/expertsystem/models/Fact.java
+src/main/java/com/codecool/expertsystem/models/FactParser.java
+src/main/java/com/codecool/expertsystem/models/RuleRepository.java
+src/main/java/com/codecool/expertsystem/models/Answer.java
+src/main/java/com/codecool/expertsystem/models/Value.java
+src/main/java/com/codecool/expertsystem/models/Question.java
+src/main/java/com/codecool/expertsystem/models/MultipleValue.java
+src/main/java/com/codecool/expertsystem/models/XMLParser.java
+src/main/java/com/codecool/expertsystem/models/SingleValue.java
+src/main/java/com/codecool/expertsystem/controllers/ESProvider.java
+src/main/java/com/codecool/expertsystem/views/UserInput.java
+src/main/java/com/codecool/expertsystem/views/UserInterface.java

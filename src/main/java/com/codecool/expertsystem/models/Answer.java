@@ -25,7 +25,7 @@ public class Answer {
    * @return boolean Returns boolean representation of answer matched
    * with user input.
    */
-    public boolean evaluateAnswerByInput(String input) {
+    boolean evaluateAnswerByInput(String input) {
         calculateAnswerRates(input);
         if (!hasMatch()) {
             throw new InputMismatchException();
@@ -35,10 +35,10 @@ public class Answer {
 
     /**
    * Method to add every value object to list.
-   * @param Value This is an object of Value class contains collection
+   * @param value - an object of Value class contains collection
    * of values (string and boolean) of every standard answer.
    */
-    public void addValue(Value value) {
+    void addValue(Value value) {
         values.add(value);
     }
 

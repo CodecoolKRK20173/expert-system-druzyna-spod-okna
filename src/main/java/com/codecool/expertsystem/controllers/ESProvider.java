@@ -37,7 +37,7 @@ public class ESProvider {
      * Method used for creating mapOfAnswers (LinkedHashMap)
      */
     private void collectAnswers() {
-        QuestionIterator questionIterator = new QuestionIterator(this.ruleRepository);
+        QuestionIterator questionIterator = (QuestionIterator) ruleRepository.getIterator();
         while (questionIterator.hasNext()) {
             Question question = questionIterator.next();
             boolean answerAsBoolean = getValidAnswerAsBoolean(question);
@@ -92,7 +92,9 @@ public class ESProvider {
             currentFact = (Fact) factIterator.next();
             foundMatch = validateFact(currentFact);
         }
-        return getDescriptionOfFact(currentFact);
+        if (foundMatch)
+            return getDescriptionOfFact(currentFact);
+        return "Unknown disease";
     }
 
     /**
